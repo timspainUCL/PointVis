@@ -8,3 +8,13 @@ vtk_module_autoinit(
 	TARGETS OctExample
     MODULES ${VTK_LIBRARIES}
 	)
+
+# include all components
+add_executable(PointsExample MACOSX_BUNDLE PointsExample.cpp )
+target_link_libraries(PointsExample PRIVATE ${VTK_LIBRARIES})
+# vtk_module_autoinit is needed
+vtk_module_autoinit(
+    TARGETS PointsExample
+    MODULES ${VTK_LIBRARIES}
+    )
+	

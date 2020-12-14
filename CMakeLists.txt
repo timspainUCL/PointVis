@@ -9,13 +9,15 @@ enable_testing()
 find_package(VTK COMPONENTS 
   CommonColor
   CommonCore
+  CommonDataModel
   FiltersSources
+  FiltersGeneral
   InteractionStyle
 #  RenderingContextOpenGL2
   RenderingCore
   RenderingFreeType
   RenderingGL2PSOpenGL2
-  RenderingOpenGL2)
+  RenderingOpenGL2)  
 
 if (NOT VTK_FOUND)
   message("Skipping OctExample: ${VTK_NOT_FOUND_MESSAGE}")
