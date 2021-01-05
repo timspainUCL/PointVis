@@ -24,7 +24,7 @@ vtk_module_autoinit(
     )
 	
 add_executable(ViewerExample MACOSX_BUNDLE PointsViewer.cpp ViewerExample.cpp)
-target_link_libraries(ViewerExample PRIVATE ${VTK_LIBRARIES})
+target_link_libraries(ViewerExample PRIVATE PointVis ${VTK_LIBRARIES})
 # vtk_module_autoinit is needed
 vtk_module_autoinit(
     TARGETS ViewerExample
