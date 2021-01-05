@@ -1,5 +1,10 @@
 add_library(PointVis PointVis.cpp)
 target_include_directories(PointVis PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(PointVis PRIVATE ${VTK_LIBRARIES})
+vtk_module_autoinit(
+	TARGETS PointVis
+	MODULES ${VTK_LIBRARIES}
+	)
 
 add_executable(OctExample MACOSX_BUNDLE octExample.cpp)
 target_link_libraries(OctExample PRIVATE ${VTK_LIBRARIES})
